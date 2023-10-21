@@ -20,14 +20,16 @@
       $nombre = $_POST['nombre'];
       $numero = $_POST['numero'];
       $seccion = $_POST['seccion'];
+      $escuela = $_POST['escuela'];
 
         // Validar que los campos no estén vacíos
-        if (!empty($nombre) && !empty($numero) && !empty($seccion)) {
+        if (!empty($nombre) && !empty($numero) && !empty($seccion) && !empty($escuela)) {
             // Preparar la consulta SQL
-            $insert = $conn->prepare('INSERT INTO instrumento (nombre, numero, seccion) VALUES (?, ?, ?)');
+            $insert = $conn->prepare('INSERT INTO instrumento (nombre, numero, seccion, escuela) VALUES (?, ?, ?, ?)');
             $insert->bindParam(1, $nombre);
             $insert->bindParam(2, $numero);
             $insert->bindParam(3, $seccion);
+            $insert->bindParam(4, $escuela);
 
             // Ejecutar la consulta y verificar el resultado
             if ($insert->execute()) {
@@ -58,6 +60,11 @@
               <option value="Banda">Banda</option>
               <option value="Coro">Coro</option>
               <option value="Estudiantina">Estudiantina</option>
+            </select>
+            <label for="escuela" class="form-label">Escuela</label>
+            <select name="escuela" id="escuela" class="form-control">
+              <option value="1">1</option>
+              <option value="2">2</option>
             </select>
            </div>
             <br>
