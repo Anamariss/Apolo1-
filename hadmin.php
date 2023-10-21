@@ -71,14 +71,14 @@ if (is_array($data)) {
                 <hr class="text-white d-none d-sm-block" />
                 <ul class="nav nav-pills flex-column mt-4 mt-sm-0" id="menu">
                   <li class="nav-item my-1">
-                    <a href="index.html" class="nav-link text-white" aria-current="page">
+                    <a href="../index.html" class="nav-link text-white" aria-current="page">
                       <i class="bi bi-house"></i>
                       <span class="ms-2 d-none d-sm-inline text-center text-sm-start">Inicio</span>
                     </a>
                   </li>
 
                   <li class="nav-item my-1">
-                    <a href="horario.html" class="nav-link text-white" aria-current="page">
+                    <a href="../horario.html" class="nav-link text-white" aria-current="page">
                       <i class="bi bi-calendar-event"></i>
                       <span class="ms-2 d-none d-sm-inline">Eventos</span> <a href="logout.php">Cerrar Sección</a>
                     </a>
@@ -103,7 +103,7 @@ if (is_array($data)) {
                     </ul>
 
                   <li class="nav-item my-1">
-                    <a href="inventario.php" class="nav-link text-white" aria-current="page">
+                    <a href="../inventario.php" class="nav-link text-white" aria-current="page">
                       <i class="bi bi-box"></i>
                       <span class="ms-2 d-none d-sm-inline text-center text-sm-start">Inventario</span>
                     </a>
