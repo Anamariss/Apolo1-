@@ -24,11 +24,12 @@
         $email = $_POST['email'];
         $usuario = $_POST['usuario'];
         $clave = password_hash($_POST['clave'], PASSWORD_BCRYPT);
+        $escuela = $_POST['escuela'];
   
           // Validar que los campos no estén vacíos
-          if (!empty($nombre) && !empty($apellido) && !empty($documento) && !empty($edad) && !empty($email) && !empty($usuario) && !empty($clave)) {
+          if (!empty($nombre) && !empty($apellido) && !empty($documento) && !empty($edad) && !empty($email) && !empty($usuario) && !empty($clave) && !empty($escuela)) {
               // Preparar la consulta SQL
-              $insert = $conn->prepare('INSERT INTO estudiante (nombre, apellido, documento, edad, email, usuario, clave) VALUES (?, ?, ?, ?, ?, ?, ?)');
+              $insert = $conn->prepare('INSERT INTO estudiante (nombre, apellido, documento, edad, email, usuario, clave, escuela) VALUES (?, ?, ?, ?, ?, ?, ?, ?)');
               $insert->bindParam(1, $nombre);
               $insert->bindParam(2, $apellido);
               $insert->bindParam(3, $documento);
@@ -36,6 +37,7 @@
               $insert->bindParam(5, $email);
               $insert->bindParam(6, $usuario);
               $insert->bindParam(7, $clave);
+              $insert->bindParam(8, $escuela);
   
               // Ejecutar la consulta y verificar el resultado
                 if ($insert->execute()) {
@@ -75,6 +77,13 @@
             
             <label for="clave" class="form-label">Clave</label>
             <input type="password" name="clave" required>
+            
+            <label for="escuela" class="form-label">Escuela</label>
+            <select name="escuela" id="escuela" class="form-control">
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+
           <button type="submit" name="insertar">Enviar</button>
           <p>¡WELCOME!</p> 
         </form>

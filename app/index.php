@@ -4,9 +4,11 @@
   session_start();
 
   if (isset($_POST['validar'])) {
-    $result = $conn->prepare('SELECT * FROM administrador WHERE usuario = ? UNION SELECT * FROM estudiante WHERE usuario = ?');
+    $result = $conn->prepare('SELECT * FROM administrador WHERE usuario = ? UNION SELECT * FROM estudiante WHERE usuario = ? UNION SELECT * FROM superadministrador WHERE usuario = ?');
     $result->bindParam(1, $_POST['usuario']);
     $result->bindParam(2, $_POST['usuario']);
+    $result->bindParam(3, $_POST['usuario']);
+  
   
     $result->execute();
 
@@ -56,6 +58,15 @@
             echo "Contraseña incorrecta";
           }
           break;
+          case 'superadministrador':
+            //Verficamos si la contraseña es correcta
+            if (password_verify($_POST['clave'], $data['clave'])) {
+              $_SESSION['superadministrador'] = $data['rol'];
+              header('location: formadmin.php.php');
+            } else {
+              echo "Contraseña incorrecta";
+            }
+            break;
         default:  
           break;
       }
