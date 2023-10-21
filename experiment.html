@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de eventos</title>
+</head>
+<body>
+    <h1>Registro de eventos</h1>
+    <form id="eventForm">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" required><br><br>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" required><br><br>
+
+        <label for="descripcion">Breve Descripción:</label><br>
+        <textarea id="descripcion" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="imagenURL">URL de la Imagen:</label>
+        <input type="url" id="imagenURL" required><br><br>
+
+        <button type="button" onclick="registrarNoticia()">Registrar evento</button>
+    </form>
+
+    <div id="eventoRegistrado"></div>
+
+    <script src="exp.js"></script>
+</body>
+</html>
+
