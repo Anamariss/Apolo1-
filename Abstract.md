@@ -1,0 +1,5 @@
+Abstract
+
+The ”Ángel Jorge Montoya Luna”music school is located in Amalfi, Antioquia. This entity has some musical processes opened to the community, those processes are able to participate in events not only on departamental, but also national level, for example, “Antioquia vive la musica”.
+The school doesn't have any kind of tool to make the operation of its processes easier, in the same way, the entity isnt so recognized by the community neither in the region nor out of it. Thats how APOLO emerges as a web plataform that turns easier the relation between the students and administrators of the school, improving their interaction and the results in the processes carried in the school, such as core, band, and others.
+In the same way, the platform is also aimed at the community with the objective of promoting the culture and making the music school more recognized, so the local people could know about the artistic projects that are taking place in their region and the events that are done outside where those processes are participating.
